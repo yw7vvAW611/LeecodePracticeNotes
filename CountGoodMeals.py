@@ -69,6 +69,11 @@ Why do we need to module 10^9+7?
 - It should be a prime number
 
 
+Knowledge review:
+
+1<< y = 1* 2^y
+y >> 1 = y / 2 
+
 '''
 
 class Solution:
