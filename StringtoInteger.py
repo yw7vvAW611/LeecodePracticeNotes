@@ -92,3 +92,46 @@ def isBoundary(n):
         return False
     else:
         return True
+
+
+
+ '''
+ Solution 2
+
+ Integrated function
+ '''
+
+ class Solution:
+    def myAtoi(self, s: str) -> int:
+        l = []
+        for i in range(0, 10):
+            tem = str(i)
+            l.append(tem)
+        # strip white space
+        i = 0
+        while i < len(s) and s[i] ==' ':
+            i+=1
+        # filter out letter case
+        if i >= len(s) or (s[i] not in l and s[i] not in ['+', '-']):
+            return 0
+        sign = 1
+        if s[i] in ['+','-']:
+            if s[i] == '-':
+                sign = -1
+            s = s[i+1:]
+        else:
+            s = s[i:]
+        r = ''
+        for i in range(0 ,len(s)):
+            if s[i] in l:
+                r+=s[i]
+            else:
+                break
+        if len(r) == 0:
+            return 0
+        number = int(r) * sign
+        if number < -2**31:
+            return -2**31
+        if number > 2**31-1:
+            return 2**31-1
+        return number
