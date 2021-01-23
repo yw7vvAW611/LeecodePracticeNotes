@@ -62,7 +62,7 @@ Constraints:
 '''
 Solution  1
 分不同的Edge Case
-
+***Edge Case  的更快
 
 一次过
 
@@ -115,7 +115,6 @@ class Solution:
 
 '''
 Solution 2 Greedy Algoriothm, 贪心算法，从大往小选
-但是 Edge Case  的更快
 '''
 
 class Solution:
