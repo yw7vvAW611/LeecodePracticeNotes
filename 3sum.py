@@ -52,10 +52,17 @@ Special Case
 
 Time Complexity
 - SortO(nlogn)
--find the answer O(n^2)
+-find the answer O(n^3)
 
 Space Complexity 
 O(1)
+
+
+
+
+
+==============
+此写法还是O（N^3），一个Loop + two pointer 才是O（N(^2），思路详见4Sum
 '''
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
@@ -77,3 +84,7 @@ class Solution:
                 if nums[second] + nums[third] == target:
                     answer.append([nums[first],nums[second],nums[third]])
         return answer 
+
+'''
+Solution 3 可用一个For loop + Two Pointer， Similar to four sum.
+'''
