@@ -52,12 +52,14 @@ def roateByOne(head):
     return q
 
 
-   '''
-   Solution 2L
-   double pointer
+'''
+Solution: 
+double pointer
 
-   Time Complexity O(N)
-   '''
+
+Time Complexity: O(N)
+Space Complexity:O(1)
+'''
 
 
    class Solution:
