@@ -46,7 +46,7 @@ Solution
 Recurrent
 
 Time Complexity O(N)
-Space Complexity: O(N)
+Space Complexity: O(N) The height of the tree
 '''
 
 # Definition for a binary tree node.
