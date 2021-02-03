@@ -49,3 +49,10 @@ class Solution:
                 q = p
             p = p.next
         return dummy.next
+
+
+
+   '''
+也可以one pointer
+
+   '''
