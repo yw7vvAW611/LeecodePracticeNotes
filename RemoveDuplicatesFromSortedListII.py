@@ -53,6 +53,31 @@ class Solution:
 
 
    '''
-也可以one pointer
-
+也可以 内外指针
    '''
+
+
+ # Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        dummy = ListNode()
+        dummy.next = head
+        cur = dummy
+        if cur.next == None or cur.next.next == None:
+            return head
+        while cur.next != None and cur.next.next != None:
+            temp = cur.next
+            if temp.next.val == temp.val:
+                while temp != None and temp.next!= None and temp.next.val == temp.val:
+                    temp = temp.next
+                cur.next = temp.next
+            else:
+                cur = cur.next
+           
+        return dummy.next
+                
+ # The second solution 更快，因为只在需要的时候两个pointer 一起iterate
