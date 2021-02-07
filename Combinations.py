@@ -51,6 +51,7 @@ class Solution:
         def backtrace(curr_res,index):
             # print("curr_res:",curr_res)
             if len(curr_res)==k:
+            	#most by deep copy because python pass by object reference
                 res.append(curr_res[:]) ##浅拷贝，这一步很重要
                 return 
 
